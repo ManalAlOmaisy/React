@@ -1,3 +1,4 @@
+import '../city.css'
 import React from 'react'
 
 function City({props}) {
@@ -11,7 +12,7 @@ function City({props}) {
             <p>max temp:  {props.main.temp_max} °C</p>
             <p>location:  {props.coord.lon}, {props.coord.lat}</p>  
         </div>
-        <img src={`http://openweathermap.org/img/w/${props.weather[0].icon}.png`}/>
+        <img src={`http://openweathermap.org/img/w/${props.weather[0].icon}.png`} alt="weather Image"/>
         
       </div>
     )

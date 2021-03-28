@@ -1,0 +1,28 @@
+.inputdata{
+  width:100%;
+  border: none;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid rgb(238, 187, 70);
+  border-radius: 5px;
+  outline: none;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+}
+
+.btn{
+  width:100%;
+  color:rgb(104, 100, 100);
+  font-weight: bold;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 4px solid rgb(238, 187, 70);
+  border-radius: 5px;
+  margin-bottom: 1.25rem;
+  font-size: inherit;
+  outline: none;
+}
+
+.btn:hover{
+  background-color: rgb(238, 187, 70);
+}

@@ -6,11 +6,11 @@ import RandomJoke from './components/ex3/RandomJoke';
 
 function App() {
   return (
-    <div>
+    <>
     <Friend />
     <DogGallery />
     <RandomJoke />
-    </div>
+    </>
   );
 }
 

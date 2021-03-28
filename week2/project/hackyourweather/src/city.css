@@ -1,0 +1,19 @@
+.main-location{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(241, 197, 94), rgb(216, 109, 55));
+  border-radius: 2.5rem;
+}
+.location{
+  width:18.75rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  line-height: 2rem;
+}
+img{
+  width: 9.3rem;
+}

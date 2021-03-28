@@ -1,4 +1,7 @@
+
+import '../search.css'
 import React from 'react'
+
 
 
 const Search = ({value, onChange,handleSubmit}) => {

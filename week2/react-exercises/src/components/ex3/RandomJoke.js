@@ -27,7 +27,7 @@ const RandomJoke = () => {
         <div>
             <p>Exercise 3</p>
             {isLoading && <p>Loadding.....</p>}
-            {!hasError &&  <Joke props={joke} key={uuid()}/> }
+            {!hasError &&  <Joke props={joke}/> }
             {hasError && <p>Something went wrong</p>} 
         </div>
     )

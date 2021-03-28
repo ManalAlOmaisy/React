@@ -24,6 +24,7 @@ function App() {
   const handleSubmit = e =>{
     e.preventDefault()
     getWeather()
+    setCityName('')
   }
 
   
