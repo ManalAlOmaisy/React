@@ -36,23 +36,32 @@ function App() {
   
 //function
 const getWeather = async () => {
-  try{
+try{
     if(cityName){
       setIsLoading(true);
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_OPENWEATHERMAP_API_KEY} `);
       const data = await response.json()  
       
       if(response.ok){
-        setCityWeather([data, ...cityWeather]);
-        setIsLoading(false);
+
+        setCityWeather((cityWeather)=> {
+          if(cityWeather.some((city) => city.name === data.name)){
+            handleAlert({text:`City Name Is already exist`});
+            return [...cityWeather]
+          }
+          else{
+            handleAlert({text:``});
+            return [data, ...cityWeather]  
+          }
+        })
+
       }
       else{
         handleAlert({text:`City Name Is Not Found`});
         setCityWeather([...cityWeather]);
       }
     }
-  
-  }  
+  }   
   catch(err){
     handleAlert({text:`Something Went Wrong`})  
   }  
