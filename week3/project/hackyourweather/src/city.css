@@ -1,0 +1,33 @@
+.main-location{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(241, 197, 94), rgb(216, 109, 55));
+    border-radius: 2.5rem;
+    margin-bottom: 15px;
+}
+.location{
+    width:18.75rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    line-height: 2rem;
+    text-align: center;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+img{
+    width: 9.3rem;
+}
+@media only screen and (min-width: 480px)and (max-width: 801px){
+.location{
+    font-size: 13px;  
+}
+}
