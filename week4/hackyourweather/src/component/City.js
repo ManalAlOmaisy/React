@@ -5,11 +5,12 @@ import {Link} from "react-router-dom";
 
 function City({props, handleDelete}) {
 
-    return (
-      <div>
-       {props.map((props) => (
-       <Link to={`/${props.id}`} style={{ textDecoration: "none", color:"rgb(92, 88, 88)"}}>
+  return (
+    <div>
+      {props.map((props) => (
+       
         <div className= "main-location"> 
+        <Link to={`/${props.id}`} style={{ textDecoration: "none", color:"rgb(92, 88, 88)"}}>
           <div className="location" key={props.id}>
             <h1>{props.name}, {props.sys.country}</h1>
             <h3>{props.weather[0].main}</h3> 
@@ -18,16 +19,16 @@ function City({props, handleDelete}) {
             <p>max temp:  {props.main.temp_max} °C</p>
             <p>location:  {props.coord.lon}, {props.coord.lat}</p>  
           </div>
+        </Link>
 
           <div className="name"> 
             <FaTrashAlt style={{marginLeft:"80px", fontSize:"20px", cursor:"pointer"}} onClick={() => handleDelete(props.id)}/>
             <img src={`http://openweathermap.org/img/w/${props.weather[0].icon}.png`}/>
           </div>
-        </div>   
-      </Link>
+        </div>  
       ))}
     </div>
-    )
+  )
 }
 
 export default City
